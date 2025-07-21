@@ -7,9 +7,9 @@ from agents import Agent, Runner, function_tool, OpenAIChatCompletionsModel, Mod
 from dotenv import load_dotenv
 load_dotenv()
 
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+SUPABASE_URL = st.secrets("SUPABASE_URL")
+SUPABASE_KEY = st.secrets("SUPABASE_KEY")
+GOOGLE_API_KEY = st.secrets("GOOGLE_API_KEY")
 
 if not all([SUPABASE_URL, SUPABASE_KEY, GOOGLE_API_KEY]):
     st.error("Missing environment variables. Please set SUPABASE_URL, SUPABASE_KEY, and GOOGLE_API_KEY.")
