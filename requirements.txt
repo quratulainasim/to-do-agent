@@ -1,0 +1,4 @@
+supabase
+openai-agents
+openai
+dotenv
